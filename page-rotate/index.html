@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Rotate</title>
+    <link rel="stylesheet" type="text/css" href="assets/page-rotate.css"/>
+    <script src="assets/page-rotate.js"></script>
+</head>
+<body>
+<main class="page-rotate">
+    <div class="input">
+        <label class="input__label" for="urls">URLs</label>
+        <textarea id="urls" name="urls" placeholder="Input simple list of urls, one url per line"></textarea>
+    </div>
+    <div class="input">
+        <label class="input__label" for="timeout">Timeout</label>
+        <input id="timeout" name="timeout" placeholder="Input rotate timeout value in seconds. Default timeout is 60 seconds"/>
+    </div>
+    <div class="controls">
+        <button class="button _action" name="start">Start rotate</button>
+        <button class="button _normal" name="save">Save settings</button>
+        <button class="button _normal" name="stop">Stop rotate</button>
+    </div>
+    <iframe id="frame" class="page-rotate__frame"></iframe>
+</main>
+</body>
+</html>

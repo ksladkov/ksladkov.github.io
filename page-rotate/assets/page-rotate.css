@@ -1,0 +1,111 @@
+html,
+body,
+p,
+div,
+span,
+textarea,
+input,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+textarea,
+input,
+button {
+  font: inherit;
+  outline: none;
+}
+body {
+  font-family: 'Helvetica Neue', 'Roboto', 'Arial', sans-serif;
+  font-size: 15px;
+}
+.input {
+  display: block;
+}
+.input__label {
+  display: block;
+  margin-bottom: 5px;
+}
+.input input,
+.input textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 6px 10px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px #ccc;
+}
+.input input:focus,
+.input textarea:focus {
+  box-shadow: inset 0 0 0 2px #fc0;
+}
+.input input {
+  height: 32px;
+  line-height: 20px;
+}
+.button {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  padding: 6px 10px;
+  cursor: pointer;
+  line-height: 18px;
+}
+.button:hover,
+.button:focus {
+  border-color: rgba(0,0,0,0.35);
+}
+.button:active {
+  background: #f6f6f6;
+}
+.button._action {
+  background: #fd4;
+}
+.button._action:active {
+  background: #fc0;
+}
+.page-rotate {
+  padding: 20px;
+}
+.page-rotate .controls {
+  margin-top: 20px;
+}
+.page-rotate .input {
+  margin-bottom: 10px;
+}
+.page-rotate textarea {
+  min-height: 240px;
+}
+.page-rotate__frame {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  border: 0;
+  z-index: 20;
+  background: #fff;
+}
+.page-rotate .button {
+  margin-right: 10px;
+}
+.page-rotate .button[name="stop"] {
+  display: none;
+  position: fixed;
+  z-index: 25;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0.1;
+}
+.page-rotate .button[name="stop"]:hover {
+  opacity: 1;
+}
+.page-rotate[state="rotating"] .page-rotate__frame {
+  display: block;
+}
+.page-rotate[state="rotating"] .button[name="stop"] {
+  display: block;
+}
